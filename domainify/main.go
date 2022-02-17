@@ -15,6 +15,8 @@ var tlds = []string{
 	"net",
 	"org",
 	"tech",
+	"dev",
+	"biz",
 }
 
 const allowedChars = "abcdefghijklmnopqrstuvwxyz0123456789_-"
