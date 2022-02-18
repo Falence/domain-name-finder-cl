@@ -14,7 +14,6 @@ func exists(domain string) (bool, error) {
 	const whoisServer string = "com.whois-servers.net"
 	conn, err := net.Dial("tcp", whoisServer+":43")
 	if err != nil {
-		fmt.Println("error happened in connecting")
 		return false, err
 	}
 	defer conn.Close()
@@ -22,7 +21,6 @@ func exists(domain string) (bool, error) {
 	scanner := bufio.NewScanner(conn)
 	for scanner.Scan() {
 		if strings.Contains(strings.ToLower(scanner.Text()), "no match") {
-			fmt.Println("error happened in string check")
 			return false, nil
 		}
 	}
