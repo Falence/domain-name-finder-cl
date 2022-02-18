@@ -2,14 +2,19 @@ package main
 
 import (
 	"bufio"
+	"fmt"
+	"log"
 	"net"
+	"os"
 	"strings"
+	"time"
 )
 
 func exists(domain string) (bool, error) {
 	const whoisServer string = "com.whois-servers.net"
 	conn, err := net.Dial("tcp", whoisServer+":43")
 	if err != nil {
+		fmt.Println("error happened in connecting")
 		return false, err
 	}
 	defer conn.Close()
@@ -17,8 +22,26 @@ func exists(domain string) (bool, error) {
 	scanner := bufio.NewScanner(conn)
 	for scanner.Scan() {
 		if strings.Contains(strings.ToLower(scanner.Text()), "no match") {
+			fmt.Println("error happened in string check")
 			return false, nil
 		}
 	}
 	return true, nil
 }
+
+var marks = map[bool]string{true: "✓", false: "✗"}
+func main() {
+	s := bufio.NewScanner(os.Stdin)
+	for s.Scan() {
+		domain := s.Text()
+		fmt.Print(domain, " ")
+		exist, err := exists(domain)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		fmt.Println(marks[!exist])	// indicates domain name available
+		time.Sleep(1 * time.Second)
+	}
+}
+
+// ✔️✖️
