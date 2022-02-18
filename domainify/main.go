@@ -13,10 +13,10 @@ import (
 var tlds = []string{
 	"com",
 	"net",
-	"org",
-	"tech",
-	"dev",
-	"biz",
+	// "org",
+	// "tech",
+	// "dev",
+	// "biz",
 }
 
 const allowedChars = "abcdefghijklmnopqrstuvwxyz0123456789_-"
