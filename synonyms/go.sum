@@ -1,2 +1,4 @@
+github.com/falence/domain-name-finder-cli/thesaurus v0.0.0-20220217145318-8d32c054c666 h1:maUduTRvdNqxYDqx9Komf6OLOY6Ehp1byenE8/Ff2aY=
+github.com/falence/domain-name-finder-cli/thesaurus v0.0.0-20220217145318-8d32c054c666/go.mod h1:I4FCS+0+9hlQ9KgiA6GoCTjrOKm/HlW8LZwskzx/2hs=
 github.com/joho/godotenv v1.4.0 h1:3l4+N6zfMWnkbPEXKng2o2/MR5mSwTrBih4ZEkkz1lg=
 github.com/joho/godotenv v1.4.0/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=

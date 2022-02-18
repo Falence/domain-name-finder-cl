@@ -7,7 +7,6 @@ import (
 	"os"
 
 	"github.com/falence/domain-name-finder-cli/thesaurus"
-	_ "github.com/joho/godotenv/autoload"
 )
 
 func main() {
