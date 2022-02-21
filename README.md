@@ -25,3 +25,4 @@ This value is used in the `synonyms` sub-program.
 - `cd` into the `domainfinder` sub-program and run `build.sh` which build all the other sub-programs.<br>
 - To run our program, type `./domainfinder`.
 - You can now type in a word and you'll get suggested domain names and their availability status.
+![Screenshot of the program running](screenshot.png)
